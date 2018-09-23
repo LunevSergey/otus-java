@@ -1,4 +1,4 @@
-package ru.otus.l21;
+package ru.otus;
 
 import java.lang.management.ManagementFactory;
 
@@ -7,7 +7,7 @@ public class Main {
     public static void main(String... args) throws InterruptedException {
         System.out.println("pid: " + ManagementFactory.getRuntimeMXBean().getName());
 
-        int size = 20_000_000;
+        int size = 2_000_000;
 
         System.out.println("Starting the loop");
         while (true) {
@@ -27,9 +27,9 @@ public class Main {
 
             for (int i = 0; i < size; i++) {
                 array[i] = new Object();
-                //array[i] = new String(""); //String pool
-                //array[i] = new String(new char[0]); //without String pool
-                //array[i] = new MyClass();
+//                array[i] = new String(""); //String pool
+//                array[i] = new String(new char[0]); //without String pool
+//                array[i] = new MyClass();
             }
             System.out.println("Created " + size + " objects.");
 
